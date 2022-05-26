@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 using std::cin;
 using std::cout;
@@ -9,9 +9,9 @@ Fraction operator*(Fraction left, Fraction right);
 
 class Fraction
 {
-	int integer;		//öåëàÿ ÷àñòü
-	int numerator;		//÷èñëèòåëü
-	int denominator;	//çíàìåíàòåëü
+	int integer;		//Ñ†ÐµÐ»Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ
+	int numerator;		//Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÐµÐ»ÑŒ
+	int denominator;	//Ð·Ð½Ð°Ð¼ÐµÐ½Ð°Ñ‚ÐµÐ»ÑŒ
 public:
 	int get_integer()const
 	{
@@ -110,14 +110,14 @@ public:
 	//				Methods:
 	Fraction& to_proper()
 	{
-		//TODO: ïåðåâîäèò äðîáü â ïðàâèëüíóþ (âûäåëÿåò öåëóþ ÷àñòü)
+		//TODO: Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´Ð¸Ñ‚ Ð´Ñ€Ð¾Ð±ÑŒ Ð² Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½ÑƒÑŽ (Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ Ñ†ÐµÐ»ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ)
 		integer += numerator / denominator;
 		numerator %= denominator;
 		return *this;
 	}
 	Fraction& to_improper()
 	{
-		//TODO: ïåðåâîäèò äðîáü â íåïðàâèëüíóþ (âûäåëÿåò öåëóþ ÷àñòü)
+		//TODO: Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´Ð¸Ñ‚ Ð´Ñ€Ð¾Ð±ÑŒ Ð² Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½ÑƒÑŽ (Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ Ñ†ÐµÐ»ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ)
 		numerator += integer * denominator;
 		integer = 0;
 		return *this;
@@ -311,7 +311,7 @@ void main()
 	int a;
 	//cin >> a;
 	Fraction A;
-	cout << "Ââåäèòå ïðîñòóþ äðîáü: ";	
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾ÑÑ‚ÑƒÑŽ Ð´Ñ€Ð¾Ð±ÑŒ: ";	
 	cin >> a;
 	cout << A << endl;
 }
